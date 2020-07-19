@@ -6,14 +6,16 @@ function enableSubmit(token) {
   document.getElementById('submit').disabled = false
 }
 
-window.onload = () => {
-  document.getElementById('submit').onclick = e => {
-    if (!document.getElementById('check').checked) {
-      e.preventDefault()
-      e.stopPropagation()
-      alert('Você precisa ler e concordar com nossos termos e política de privacidade para completar o envio do formulário.')
-    }
+function submitOnClickHandler (event) {
+  if (!document.getElementById('check').checked) {
+    event.preventDefault()
+    event.stopPropagation()
+    alert('Você precisa ler e concordar com nossos termos e política de privacidade para completar o envio do formulário.')
   }
+}
+
+window.onload = () => {
+  document.getElementById('submit').onclick = submitOnClickHandler
 
   function lerp(v0, v1, t) {
     t = Math.min(1, t)
