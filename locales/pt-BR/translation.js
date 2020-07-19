@@ -1,0 +1,3 @@
+const ptTranslation = {
+  home: 'início'
+}

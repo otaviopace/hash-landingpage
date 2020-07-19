@@ -1,0 +1,3 @@
+const enTranslation = {
+  home: 'home'
+}

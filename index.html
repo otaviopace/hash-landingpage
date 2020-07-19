@@ -37,8 +37,7 @@
   <header>
     <div>
       <img src="SMALL/logo_menu.png" width="112px" height="33px" style="cursor:pointer;" onclick="window.scroll({ top: 0, behavior: 'smooth'})"/>
-      <a class="header-link home" onclick="window.scroll({ top: 0 * parseFloat(window.document.body.style.zoom), behavior: 'smooth'})">
-        início
+      <a id="home-text" class="header-link home" onclick="window.scroll({ top: 0 * parseFloat(window.document.body.style.zoom), behavior: 'smooth'})">
       </a>
       <a class="header-link about" onclick="window.scroll({ top: 850 * parseFloat(window.document.body.style.zoom), behavior: 'smooth'})">
         sobre
@@ -49,7 +48,7 @@
       <a class="header-link contact" onclick="window.scroll({ top: 2650 * parseFloat(window.document.body.style.zoom), behavior: 'smooth'})">
         contato
       </a>
-      <a class="change-language" href="./en/index.html">
+      <a class="change-language" onclick="changeLanguage('en')">
         <img src="BT_EN@2x.png"/>
       </a>
       
@@ -327,8 +326,12 @@
     </div>
     <!--  ========================================== -->
 
+    <script src="/locales/pt-BR/translation.js"></script>
+    <script src="/locales/en/translation.js"></script>
+    <script src="/translation.js"></script>
     <script src="smoothscroll.js"></script>
     <script src="main.js"></script>
+
 
     <div class="left-box bg-squares-4">
       <h2>
