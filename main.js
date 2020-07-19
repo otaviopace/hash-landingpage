@@ -7,8 +7,6 @@ function enableSubmit(token) {
 }
 
 window.onload = () => {
-  // document.getElementById('submit').disabled = true
-
   document.getElementById('submit').onclick = e => {
     if (!document.getElementById('check').checked) {
       e.preventDefault()
@@ -55,23 +53,6 @@ window.onload = () => {
     document.querySelector('.t5'),
     document.querySelector('.t6'),
   ]
-
-  // const towersInitialXY = towers.map(tower => {
-  //   return {
-  //     x: parseInt(
-  //       window
-  //         .getComputedStyle(tower)
-  //         .getPropertyValue('transform')
-  //         .split(',')[4]
-  //     ),
-  //     y: parseInt(
-  //       window
-  //         .getComputedStyle(tower)
-  //         .getPropertyValue('transform')
-  //         .split(',')[5]
-  //     ),
-  //   }
-  // })
 
   const towersInitialXY = [
     { x: -197, y: -74, },
@@ -403,12 +384,6 @@ window.onload = () => {
       }
     }, 66)
   }, false)
-
-  // const frame = document.createElement('iframe')
-  // frame.src = 'https://app.pipefy.com/public/form/Gp5ojRgJ?embedded=true'
-  // frame.frameBorder = 0
-  // frame.classList = 'pipefy-form' 
-  // document.querySelector('.bg-squares-4 .pipe').appendChild(frame)
 
   const checkSize = e => {
     if (window.innerWidth < 1100) {
